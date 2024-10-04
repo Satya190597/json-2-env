@@ -1,0 +1,36 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+  <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+  <id>com.satya.prakash.nandy.json-2-env</id>
+
+  <!-- Public plugin name should be written in Title Case.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+  <name>Json-2-env</name>
+
+  <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+  <vendor email="satyaprakashnandy@gmail.com">Satya Prakash Nandy</vendor>
+
+  <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+       Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+  <description>Json 2 Env is a utility plugin that helps you convert JSON text into environment variables. You can convert up to 12 JSON texts at once. There is an option to add a prefix for each JSON text if needed.
+
+    To get started, click on Add. After entering your JSON text and any prefix you want to use, click on Convert. The output will give you the environment text that you can directly use in IntelliJ.
+
+    Please note: Nested JSON structures are not supported.</description>
+
+  <!-- Product and plugin compatibility requirements.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <!-- Extension points defined by the plugin.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+  <extensions defaultExtensionNs="com.intellij">
+
+  </extensions>
+  <actions>
+    <action id="com.satya.prakash.nandy.json-2-env" class="com.satya.prakash.nandy.json2env.JsonToEnvApplication"  text="Json 2 Env">
+      <add-to-group group-id="ToolsMenu" anchor="first" />
+    </action>
+  </actions>
+</idea-plugin>
