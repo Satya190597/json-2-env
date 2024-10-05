@@ -24,6 +24,6 @@ Whether you're managing configurations for different environments or integrating
   ```
 ### How to use?
 
-![How To Use](https://i.imgur.com/RfLszrW.png)
+![How To Use](https://i.imgur.com/sQnbNa8.png)
 
 
