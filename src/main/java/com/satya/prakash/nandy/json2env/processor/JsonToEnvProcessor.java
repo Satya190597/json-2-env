@@ -47,7 +47,7 @@ public class JsonToEnvProcessor {
             if (Strings.isBlank(prefix))
                 stringBuilder.append(entry.getKey()).append("=").append(entry.getValue()).append(";");
             else
-                stringBuilder.append(prefix.length()>80 ? prefix.substring(0,80) : prefix).append(".").append(entry.getKey()).append("=").append(entry.getValue()).append(";");
+                stringBuilder.append(prefix.length()>200 ? prefix.substring(0,200) : prefix).append(entry.getKey()).append("=").append(entry.getValue()).append(";");
         }
     }
     private void validateAllTheInputJson()  {

@@ -101,6 +101,8 @@ public class HeaderComponent implements JsonToEnvComponent {
     }
     private void showResult(String text) {
         resultTextField.setText(text);
+        resultTextField.requestFocusInWindow();
+        resultTextField.setCaretPosition(0);
         parentComponent.revalidate();
         parentComponent.repaint();
     }

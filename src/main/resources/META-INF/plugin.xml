@@ -5,7 +5,7 @@
 
   <!-- Public plugin name should be written in Title Case.
        Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-  <name>Json-2-env</name>
+  <name>Json 2 env</name>
 
   <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
   <vendor email="satyaprakashnandy@gmail.com">Satya Prakash Nandy</vendor>
@@ -13,15 +13,53 @@
   <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
        Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
        Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-  <description>Json 2 Env is a utility plugin that helps you convert JSON text into environment variables. You can convert up to 12 JSON texts at once. There is an option to add a prefix for each JSON text if needed.
-
-    To get started, click on Add. After entering your JSON text and any prefix you want to use, click on Convert. The output will give you the environment text that you can directly use in IntelliJ.
-
-    Please note: Nested JSON structures are not supported.</description>
+  <description>
+    <![CDATA[
+      <h1>Json 2 Env</h1>
+      <ul>
+         <li><b>Purpose:</b> Converts JSON text into environment variables for easy usage in development environments.</li>
+         <li><b>Batch Conversion:</b> Supports converting up to 12 JSON texts simultaneously.</li>
+         <li><b>Prefix Option:</b> Users can add a custom prefix for each JSON text if needed, helping to organize environment variables better.</li>
+      </ul>
+      <h1>Getting Started</h1>
+      <ol>
+        <li>
+          <b>Add JSON Text:</b>
+          <ul>
+            <li>Click on the Add button to start.</li>
+            <li>Enter your JSON text in the provided input field.</li>
+            <li>Optionally, enter a prefix to prepend to the generated environment variable names.</li>
+          </ul>
+        </li>
+        <li>
+          <b>Convert JSON:</b>
+          <ul>
+            <li>After entering the JSON and prefix (if applicable), click on the Convert button.</li>
+            <li>The plugin processes the input and generates the corresponding environment variable text.</li>
+          </ul>
+        </li>
+        <li>
+          <b>Output:</b>
+          <ul>
+            <li>The output displays environment variables in a format that can be directly used in IntelliJ or other development tools.</li>
+            <li>Users can easily copy the generated text for use in their projects.</li>
+          </ul>
+        </li>
+      </ol>
+      <h1>Important Notes</h1>
+      <ul>
+        <li><b>Nested JSON Structures:</b> Currently, the plugin does not support nested JSON structures. Only flat JSON objects will be converted to environment variables.</li>
+        <li><b>Usage Scenarios:</b> Ideal for developers needing to quickly set up environment variables from configuration files or API responses.</li>
+        <li><b>Compatibility:</b> Works seamlessly within the IntelliJ IDEA environment, enhancing productivity by streamlining the setup of environment variables.</li>
+      </ul>
+    ]]>
+  </description>
 
   <!-- Product and plugin compatibility requirements.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
   <depends>com.intellij.modules.platform</depends>
+
+  <idea-version since-build="222" until-build="224.*"/>
 
   <!-- Extension points defined by the plugin.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
@@ -31,6 +69,7 @@
   <actions>
     <action id="com.satya.prakash.nandy.json-2-env" class="com.satya.prakash.nandy.json2env.JsonToEnvApplication"  text="Json 2 Env">
       <add-to-group group-id="ToolsMenu" anchor="first" />
+      <keyboard-shortcut first-keystroke="control pressed J" keymap="$default"/>
     </action>
   </actions>
 </idea-plugin>

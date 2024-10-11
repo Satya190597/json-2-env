@@ -23,16 +23,14 @@ public class ResultPanelComponent implements JsonToEnvComponent {
         JPanel jPanel = new JPanel(new VerticalFlowLayout());
         jPanel.add(new JSeparator());
         JLabel label = new JLabel("<html>" +
-                "<ul>" +
-                "<li><b>Json 2 Env</b> is a utility plugin to convert JSON text to environment variables.</li>" +
-                "<li>You can convert up to <b>12 JSON texts</b> at once.</li>" +
-                "<li>An optional <b>prefix</b> can be added for each JSON text.</li>" +
+                "<b>Get Started</b>"+
+                "<ul>"+
                 "<li>To get started, click on <b>Add</b>.</li>" +
                 "<li>Once you enter your JSON text and prefix (if required), click on <b>Convert</b>.</li>" +
                 "<li>The output will provide you with environment text that can be directly used in IntelliJ.</li>" +
-                "<li><b>Nested JSON structures are not supported.</b></li>" +
+                "<li><b>Note : Nested JSON structures are not supported.</b></li>" +
                 "</ul>" +
-                "<span><b>Result</b></span>"+
+                "<b>Result : </b>"+
                 "</html>");
         jPanel.add(label);
         jPanel.add(jTextField);
