@@ -23,8 +23,21 @@ Whether you're managing configurations for different environments or integrating
   ```bash
   gradle runIde
   ```
-### How to use?
+## How to use?
 
 ![How To Use](https://i.imgur.com/sQnbNa8.png)
+
+## How to Raise an Issue?
+When raising an issue, please ensure to include all relevant details and the steps to reproduce the defect, if applicable. To help you categorize your request correctly, refer to the table below, which outlines the appropriate labels to use for different types of issues.
+
+| Issue Type                     | Label Used               |
+|--------------------------------|-------------------------|
+| For any kind of functional enhancement.                    | ![ENHANCEMENT](https://img.shields.io/badge/enhancement-cyan)            |
+| For any defect or bug.                  |  ![BUG](https://img.shields.io/badge/bug-red)|
+| Enhancement in documentation.    | ![DOCUMENTATION](https://img.shields.io/badge/documentation-blue)           |
+| Request for help on plugin Usage. | ![HELP WANTED](https://img.shields.io/badge/help%20wanted-green)           |
+
+
+
 
 
