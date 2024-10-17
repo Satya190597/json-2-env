@@ -43,4 +43,9 @@ public class JsonToEnvRepo {
             return listOfJsonInputComponent.size()>=12;
         }
     }
+    public void reset() {
+        synchronized (JsonToEnvRepo.class) {
+            jsonToEnvRepo = null;
+        }
+    }
 }
