@@ -4,6 +4,8 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.ui.popup.JBPopup;
 
+import com.intellij.openapi.ui.popup.JBPopupListener;
+import com.intellij.openapi.ui.popup.LightweightWindowEvent;
 import com.satya.prakash.nandy.json2env.repo.JsonToEnvRepo;
 import com.satya.prakash.nandy.json2env.ui.*;
 import org.jetbrains.annotations.NotNull;
@@ -16,14 +18,17 @@ public class JsonToEnvApplication extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-        // Close Existing Popup.
-        closeExistingPopup();
-        // Reset previous state.
-        JsonToEnvRepo.getRepo().reset();
+        performCleanUpOnStart();
         JComponent component = new UiBuilder().buildUi();
-        popup = new PopupJsonToEnv(component,component).getComponent();
+        popup = new PopupComponent(component,component).getComponent();
         popup.showInFocusCenter();
     }
+
+    private void performCleanUpOnStart() {
+        closeExistingPopup();
+        JsonToEnvRepo.getRepo().reset();
+    }
+
     private void closeExistingPopup() {
         if(Objects.nonNull(popup) && popup.isVisible())
             popup.cancel();
