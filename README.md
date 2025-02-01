@@ -25,10 +25,10 @@ Whether you're managing configurations for different environments or integrating
   ```
 ## How to use?
 ![How To Use](https://i.imgur.com/ac2V9k2.png)
-### Analyze Nested JSON Structure. (Optional)
+### Analyze Nested JSON Structure (Optional).
 - Enabling this option will flatten the nested JSON structure into individual key-value pairs, rather than retaining it as a single string.
 ![How To Use](https://i.imgur.com/ddFS11U.png)
-### Analyze array as multi value.
+### Analyze array as multi value (Optional).
 - By selecting this option, all the elements in the array will be treated as individual key-value pairs.
 ![How To Use](https://i.imgur.com/JU6y2oQ.png)
 ## How to Raise an Issue?
