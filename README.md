@@ -25,7 +25,7 @@ Whether you're managing configurations for different environments or integrating
   ```
 ## How to use?
 
-![How To Use](https://i.imgur.com/sQnbNa8.png)
+![How To Use](https://i.imgur.com/ac2V9k2.png)
 
 ## How to Raise an Issue?
 When raising an issue, please ensure to include all relevant details and the steps to reproduce the defect, if applicable. To help you categorize your request correctly, refer to the table below, which outlines the appropriate labels to use for different types of issues.
