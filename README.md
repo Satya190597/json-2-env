@@ -1,5 +1,5 @@
 [![GitHub License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
-![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.4-blue.svg)
 # Json-2-Env
 The JSON to Env plugin simplifies the process of converting JSON strings into environment variable files. With this tool, you can effortlessly convert multiple JSON objects at once, streamlining your development workflow.
 ### Key Features:
@@ -24,9 +24,13 @@ Whether you're managing configurations for different environments or integrating
   gradle runIde
   ```
 ## How to use?
-
-![How To Use](https://i.imgur.com/sQnbNa8.png)
-
+![How To Use](https://i.imgur.com/ac2V9k2.png)
+### Analyze Nested JSON Structure. (Optional)
+- Enabling this option will flatten the nested JSON structure into individual key-value pairs, rather than retaining it as a single string.
+![How To Use](https://i.imgur.com/ddFS11U.png)
+### Analyze array as multi value.
+- By selecting this option, all the elements in the array will be treated as individual key-value pairs.
+![How To Use](https://i.imgur.com/JU6y2oQ.png)
 ## How to Raise an Issue?
 When raising an issue, please ensure to include all relevant details and the steps to reproduce the defect, if applicable. To help you categorize your request correctly, refer to the table below, which outlines the appropriate labels to use for different types of issues.
 
