@@ -24,8 +24,10 @@ Whether you're managing configurations for different environments or integrating
   gradle runIde
   ```
 ## How to use?
-
 ![How To Use](https://i.imgur.com/ac2V9k2.png)
+### Analyze Nested JSON Structure. (Optional)
+- Enabling this option will flatten the nested JSON structure into individual key-value pairs, rather than retaining it as a single string.
+![How To Use](https://i.imgur.com/ddFS11U.png)
 
 ## How to Raise an Issue?
 When raising an issue, please ensure to include all relevant details and the steps to reproduce the defect, if applicable. To help you categorize your request correctly, refer to the table below, which outlines the appropriate labels to use for different types of issues.
