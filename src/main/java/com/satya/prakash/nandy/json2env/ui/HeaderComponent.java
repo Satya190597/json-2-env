@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
 import java.util.List;
 
 public class HeaderComponent implements JsonToEnvComponent {
@@ -30,6 +31,7 @@ public class HeaderComponent implements JsonToEnvComponent {
         panel.add(createButton("Add",getAddButtonActionListener()));
         panel.add(createButton("Convert", getCovertButtonActionListener()));
         panel.add(createButton("Clear All",getClearAllButtonActionListener()));
+        panel.add(createButton("Repo & Doc", getRpoLinkButtonActionListener()));
         return panel;
     }
 
@@ -70,6 +72,20 @@ public class HeaderComponent implements JsonToEnvComponent {
         };
     }
 
+    private ActionListener getRpoLinkButtonActionListener() {
+        return new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Desktop.getDesktop().browse(new URI("https://github.com/Satya190597/json-2-env"));
+                }
+                catch (Exception exception) {
+                    showErrorLabel(exception.getMessage());
+                }
+            }
+        };
+    }
+
     private ActionListener getClearAllButtonActionListener() {
         return new ActionListener() {
             @Override
@@ -79,7 +95,6 @@ public class HeaderComponent implements JsonToEnvComponent {
                 for (JsonInputComponent jsonInputComponent : jsonInputComponentList) {
                     parentComponent.remove(jsonInputComponent.getJsonInputComponent());
                     jsonToEnvRepo.removeComponent(jsonInputComponent);
-
                 }
                 clearResult();
             }

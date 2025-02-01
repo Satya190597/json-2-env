@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.satya.prakash.nandy"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
   mavenCentral()
@@ -32,7 +32,7 @@ tasks {
 
   patchPluginXml {
     sinceBuild.set("222")
-    untilBuild.set("242.*")
+    untilBuild.set("251.*")
   }
 
   signPlugin {
@@ -48,6 +48,9 @@ tasks {
 
 dependencies {
   implementation("org.json:json:20240303")
+  testImplementation("org.junit.jupiter:junit-jupiter-engine:5.11.2")
+  testImplementation("org.mockito:mockito-core:5.14.2")
+  testImplementation("org.mockito:mockito-junit-jupiter:5.14.2")
 }
 
 tasks.test {

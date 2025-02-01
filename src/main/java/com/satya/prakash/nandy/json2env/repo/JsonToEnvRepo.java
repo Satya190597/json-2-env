@@ -2,11 +2,14 @@ package com.satya.prakash.nandy.json2env.repo;
 
 import com.satya.prakash.nandy.json2env.ui.JsonInputComponent;
 
+import javax.swing.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class JsonToEnvRepo {
     final Set<JsonInputComponent> listOfJsonInputComponent =  ConcurrentHashMap.newKeySet();
+    private boolean readNestedJson = false;
+    private boolean readArrayAsMultiValue = false;
     private static volatile JsonToEnvRepo jsonToEnvRepo;
     private JsonToEnvRepo() {
     };
@@ -48,4 +51,25 @@ public class JsonToEnvRepo {
             jsonToEnvRepo = null;
         }
     }
+    public boolean isReadNestedJson() {
+        synchronized (JsonToEnvRepo.class) {
+            return readNestedJson;
+        }
+    }
+    public void setReadNestedJson(boolean state) {
+        synchronized (JsonToEnvRepo.class) {
+            readNestedJson = state;
+        }
+    }
+    public void setReadArrayAsMultiValue(boolean state) {
+        synchronized (JsonToEnvRepo.class) {
+            readArrayAsMultiValue = state;
+        }
+    }
+    public boolean isReadArrayAsMultiValue() {
+        synchronized (JsonToEnvRepo.class) {
+            return readArrayAsMultiValue;
+        }
+    }
+
 }

@@ -1,0 +1,34 @@
+{
+  "library": {
+    "name": "City Library",
+    "location": "Downtown",
+    "books": [
+      {
+        "id": 1,
+        "title": "1984",
+        "author": "George Orwell",
+        "year": 1949,
+        "available": true
+      },
+      {
+        "id": 2,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "year": 1960,
+        "available": false
+      }
+    ],
+    "members": [
+      {
+        "id": 1,
+        "name": "Alice Smith",
+        "email": "alice@example.com"
+      },
+      {
+        "id": 2,
+        "name": "Bob Johnson",
+        "email": "bob@example.com"
+      }
+    ]
+  }
+}
