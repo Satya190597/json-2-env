@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.satya.prakash.nandy"
-version = "1.0.3"
+version = "1.0.7"
 
 repositories {
   mavenCentral()
